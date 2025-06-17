@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -7,9 +8,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">ProTenda</h1>
           <nav className="space-x-4">
-            <a href="#" className="hover:underline">How It Works</a>
-            <a href="#" className="hover:underline">For Pros</a>
-            <a href="#" className="hover:underline">Contact</a>
+            <Link to="/how-it-works" className="hover:underline">How It Works</Link>
+            <Link to="/for-pros" className="hover:underline">For Pros</Link>
+            <Link to="/contact" className="hover:underline">Contact</Link>
           </nav>
         </div>
       </header>
@@ -22,12 +23,12 @@ export default function Home() {
           Post your job and get matched with verified service providers near you.
         </p>
         <div className="space-x-4">
-          <a href="#" className="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">
+          <Link to="/get-quotes" className="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700">
             Get Quotes
-          </a>
-          <a href="#" className="bg-gray-200 px-6 py-3 rounded-full shadow hover:bg-gray-300">
+          </Link>
+          <Link to="/join" className="bg-gray-200 px-6 py-3 rounded-full shadow hover:bg-gray-300">
             Join as a Pro
-          </a>
+          </Link>
         </div>
       </main>
 
@@ -36,4 +37,4 @@ export default function Home() {
       </footer>
     </div>
   );
-              }
+}
